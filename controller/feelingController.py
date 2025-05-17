@@ -32,9 +32,7 @@ class CreateFeeling(MethodResource, MethodView):
         image_file = kwargs.get("image_file")
         color = kwargs.get("color")
 
-        # Create feeling (your logic)
         feeling_id = new_feeling(feeling_name, image_file, color)
-        print(feeling_id)
         return {"message": "Feeling created", "feelingid": feeling_id}, 201
 
 class UpdateFeeling(MethodResource, MethodView):
